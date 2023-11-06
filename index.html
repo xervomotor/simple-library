@@ -15,29 +15,32 @@
     <div class="library-container" id="books-list">
       <!-- Books will be added here dynamically -->
     </div>
+    <footer>
+      <p>
+        Copyright ©
+        <script>
+          document.write(new Date().getFullYear());
+        </script>
+        X Tang
+      </p>
+      <a href="https://github.com/xtang999" , target="_blank"></a>
+    </footer>
 
-    <div id="addBookModal" class="modal">
-      <div class="modal-content">
-        <h3>New Book</h3>
-        <label for="book-title">Title:</label>
-        <input type="text" id="book-title" placeholder="Enter title" />
+    <div class="modal" id="addBookModal">
+      <form id="addBookForm">
+        <h3>Add new book</h3>
+        <input type="text" id="title" placeholder="Title" required />
+        <p id="errorMsg"></p>
+        <input type="text" id="author" placeholder="Author" required />
+        <input type="number" id="pages" placeholder="Pages" required />
 
-        <label for="book-author">Author:</label>
-        <input type="text" id="book-author" placeholder="Enter author" />
+        <div>
+          <label for="isRead">Read?</label>
+          <input type="checkbox" id="isRead" required />
+        </div>
 
-        <label for="book-pages">Pages:</label>
-        <input
-          type="number"
-          id="book-pages"
-          placeholder="Enter number of pages"
-        />
-
-        <label for="book-read">Read?</label>
-        <input type="checkbox" id="book-read" />
-
-        <button id="addBookBtn">Add Book</button>
-        <button id="cancelBtn">Cancel</button>
-      </div>
+        <button id="addBookBtn" type="submit">Submit</button>
+      </form>
     </div>
 
     <script src="script.js"></script>

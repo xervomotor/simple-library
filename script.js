@@ -9,10 +9,10 @@ addBookBtn.addEventListener('click',addBook);
 cancelBtn.addEventListener('click', hideModal);
 
 function Book() {
-  const title = document.querySelector('#book-title').value;
-  const author = document.querySelector('#book-author').value;
-  const pages = document.querySelector('#book-pages').value;
-  const read = document.querySelector('#book-read').checked ? 'Read' : 'Not read';
+  const title = document.querySelector('#title').value;
+  const author = document.querySelector('#author').value;
+  const pages = document.querySelector('#pages').value;
+  const read = document.querySelector('#isRead').checked ? 'Read' : 'Not read';
   this.title = title;
   this.author = author;
   this.pages = pages;
